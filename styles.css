@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: var(--light-gray-color);
+  width: 100%;
+}
+:root {
+  --white-color: #fff;
+  --light-gray-color: #f1f3f5;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 22vh;
+}
+.cinema-img {
+  width: 100%;
+  height: 22vh;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.5);
+}
+.absolute-div {
+  position: absolute;
+  top: 19.1vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  max-width: 50rem;
+  width: 100%;
+  row-gap: 1rem;
+  padding: 2rem;
+}
+.search-heading {
+  font-size: 2rem;
+  color: var(--white-color);
+}
+.watchlist-btn {
+  justify-self: right;
+  padding-right: 0.4rem;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+.search-div {
+  grid-column: span 2;
+  position: relative;
+}
+.search-input {
+  z-index: 100000;
+  outline: none;
+  border: none;
+  box-shadow: 0rem 0rem 0.8rem rgb(0, 0, 0, 0.8);
+  font-size: 1.2rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: -1%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+/*film-reel*/
+.film-reel-div {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+}
+.film-reel-inner-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.film-reel-img {
+  width: 6rem;
+  height: auto;
+}
+.film-reel-p {
+  margin-top: 0.6rem;
+  font-size: 1.2rem;
+  color: #444;
+}
+/*Center*/
+.center {
+  display: flex;
+  justify-content: center;
+}
+/*Movies section*/
+.movies-section {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  max-width: 50rem;
+  column-gap: 1rem;
+  row-gap: 2rem;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.movie-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.4rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background-color: var(--white-color);
+  box-shadow: 0rem 0rem 0.5rem rgb(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.movie-img {
+  width: 14rem;
+  max-height: 21rem;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  grid-column: span 2;
+}
+.movie-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  grid-column: span 2;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.type-p {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #444;
+}
+.year-p {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #444;
+  justify-self: right;
+}
+.movie-detail-awards {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #444;
+}
+/*Movie details*/
+.movie-details-section {
+  margin-top: 4rem;
+  max-width: 50rem;
+}
+.movie-details-inner-div {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0rem 0.5rem rgb(0, 0, 0, 0.3);
+}
+.movie-detail-img {
+  width: 12rem;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.movie-detail-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+.favorites-img {
+  width: 1.4rem;
+  height: 1.4rem;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.favorites-img:hover {
+  transform: scale(1.1);
+}
+.movie-detail-spec-line {
+  font-size: 1rem;
+  font-style: italic;
+  color: #444;
+  margin-bottom: 1rem;
+}
+.movie-detail-actors {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+.movie-detail-genre {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+.movie-detail-release-date {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+.movie-detail-runtime {
+  font-size: 1.1rem;
+  margin-bottom: 1.4rem;
+}
+.movie-detail-plot {
+  font-size: 1.1rem;
+}
+
+/*General*/
+.hidden {
+  display: none;
+}
+.bold {
+  font-weight: 700;
+  color: #111;
+}
+.un-italic {
+  font-style: normal;
+}
