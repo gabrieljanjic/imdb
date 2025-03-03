@@ -173,6 +173,7 @@ body {
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0rem 0rem 0.5rem rgb(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
 }
 .movie-detail-img {
   width: 12rem;
@@ -219,7 +220,11 @@ body {
 .movie-detail-plot {
   font-size: 1.1rem;
 }
-
+/*Watchlist*/
+.watchlist-section {
+  margin-top: 4rem;
+  max-width: 50rem;
+}
 /*General*/
 .hidden {
   display: none;
