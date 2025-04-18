@@ -24,6 +24,10 @@ const searchFunction = function () {
     filmReelDiv.classList.add('hidden');
     moviesSection.classList.remove('hidden');
     movieDetailsSection.innerHTML = ``;
+    movieDetailsSection.style.padding = '1rem';
+    watchlistSection.style.padding = '0rem';
+    movieDetailsSection.style.padding = '0rem';
+
     watchlistSection.classList.add('hidden');
   }
 };
@@ -78,7 +82,7 @@ const getMovieData = function (movie) {
           .then(selectedMovie => {
             console.log(selectedMovie);
             moviesSection.classList.add('hidden');
-
+            movieDetailsSection.style.padding = '1rem';
             movieDetailsSection.insertAdjacentHTML(
               'beforeend',
               showingExactMovie(selectedMovie)
@@ -158,6 +162,8 @@ watchlistBtn.addEventListener('click', function () {
   moviesSection.classList.add('hidden');
   watchlistSection.classList.remove('hidden');
   movieDetailsSection.innerHTML = ``;
+  movieDetailsSection.style.padding = 0;
+  watchlistSection.style.padding = '1rem';
   watchlistSection.innerHTML = ``;
   favoritesMovieArray.forEach(favoriteMovie => {
     console.log(favoriteMovie);

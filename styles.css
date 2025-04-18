@@ -103,15 +103,17 @@ body {
 .center {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 /*Movies section*/
 .movies-section {
   margin-top: 3rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, 15rem);
   justify-content: center;
   align-items: center;
   max-width: 50rem;
+  padding: 0 1rem;
   column-gap: 1rem;
   row-gap: 2rem;
   width: 100%;
@@ -123,15 +125,15 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 0.4rem;
-  padding: 1rem;
+  gap: 1rem;
+  padding: 1rem 2rem;
   border-radius: 0.4rem;
   background-color: var(--white-color);
   box-shadow: 0rem 0rem 0.5rem rgb(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .movie-img {
-  width: 14rem;
+  width: 13rem;
   max-height: 21rem;
   height: auto;
   object-fit: cover;
@@ -164,6 +166,7 @@ body {
 .movie-details-section {
   margin-top: 4rem;
   max-width: 50rem;
+  padding: 1rem;
 }
 .movie-details-inner-div {
   display: flex;
@@ -176,7 +179,10 @@ body {
   margin-bottom: 2rem;
 }
 .movie-detail-img {
-  width: 12rem;
+  margin-left: 0.5rem;
+  max-width: 12rem;
+  max-height: 18rem;
+  align-self: center;
 }
 .flex {
   display: flex;
@@ -235,4 +241,58 @@ body {
 }
 .un-italic {
   font-style: normal;
+}
+/**********************************/
+@media (max-width: 40rem) {
+  .movie-details-section {
+    margin-top: 2rem;
+  }
+  .movie-details-inner-div {
+    display: flex;
+    flex-direction: column;
+  }
+  .movie-detail-img {
+    max-width: 13rem;
+    max-height: 18rem;
+    align-self: center;
+  }
+}
+@media (max-width: 34rem) {
+  html {
+    font-size: 87.5%;
+  }
+}
+@media (max-width: 30rem) {
+  .movies-section {
+    grid-template-columns: repeat(auto-fill, 13rem);
+  }
+
+  .movie-img {
+    width: 11rem;
+    max-height: 18rem;
+  }
+}
+@media (max-width: 26rem) {
+  .search-heading {
+    font-size: 1.6rem;
+  }
+  .watchlist-btn {
+    font-size: 1rem;
+  }
+  .movies-section {
+    grid-template-columns: repeat(auto-fill, 11rem);
+  }
+  .movie-div {
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+  .movie-img {
+    width: 9rem;
+    max-height: 16rem;
+  }
+}
+@media (max-width: 22rem) {
+  html {
+    font-size: 75%;
+  }
 }
